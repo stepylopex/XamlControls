@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamlControls"
+             x:Class="XamlControls.MainPage"
+             Title="Markup Controls with Extensions"
+             Padding="10">
+
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection>
+
+                <TextCell Text="x:Static Demo"
+                          Detail="Access constants or statics (Label Control)"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:DemoStaticPage}" />
+
+
+                <TextCell Text="x:Reference Demo"
+                          Detail="Reference named elements on the page (SliderControl)"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:DemoReferencePage}" />
+
+
+                <TextCell Text="x:Type Demo"
+                          Detail="Associate a Button Control with a Type"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:DemoTypePage}" />
+                
+                <TextCell Text="x:Array Demo"
+                          Detail="Use an array to fill a ListView Control"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:DemoArrayPage}" />
+
+
+
+
+
+
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>    
